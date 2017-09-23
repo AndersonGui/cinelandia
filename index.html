@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cinelândia</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/round-about.css" rel="stylesheet">
+    <link href="vendor/jsGrid/css/jsgrid.min.css" rel="stylesheet" />
+    <link href="vendor/jsGrid/css/jsgrid-theme.min.css" rel="stylesheet" />
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">CINELÂNDIA <i class="fa fa-film" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="my-4">CINELÂNDIA
+      </h1>
+      <p>Olá, nessa pagina você podera ver quais filmes estão mais bem aceitos pelo publico em geral. </p>
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="my-4">Filmes</h2>
+        </div>
+        <div style="margin-bottom:3%" id="jsGrid">
+        </div>
+      </div>
+    </div>
+
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Pagina sem fins lucrativos &copy; Cinelândia</p>
+      </div>
+    </footer>
+
+    
+        <div id="ModalFilme" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Detalhes do Filme</h4>
+                  </div>
+                  <div class="modal-body"  data-bind="with: Filme">
+                    <div class="col-lg-12 col-sm-12 text-center mb-4">
+                        <h2 data-bind="text:Nome"></h2>
+                        <h3 class="text-uppercase text-truncate" data-bind="text:Ano"></h3>
+                      <img class="img-fluid d-block mx-auto" data-bind="attr: { src: Cartaz, title: Nome, alt: Nome }">
+                      <h4><span data-bind="text:Diretor"></span></h4>
+                      <p class="text-uppercase text-truncate" data-bind="text:Categoria"></p>
+                      <p data-bind="text:Sinopse"></p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/knockout/knockout-3.4.2.js"></script>
+    <script src="vendor/jsGrid/js/jsgrid.min.js"></script>
+    <script src="cinelandiaViewModel.js"></script>
+  </body>
+</html>
