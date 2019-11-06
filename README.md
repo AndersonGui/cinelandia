@@ -1,5 +1,5 @@
 # CINELANDIA
-Repositorio do projeto utilizando Javascript.
+Repositorio do projeto utilizando KnockoutJs.
 Projeto sem fins lucrativos.
 
 Bootstrap: https://v4-alpha.getbootstrap.com/
